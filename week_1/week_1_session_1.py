@@ -5,6 +5,7 @@ Created on Tue Aug  3 07:43:45 2021
 @author: ajaz7
 """
 from math import *
+import copy as cpy
 
 y = log(10)
 j = 5
@@ -22,9 +23,13 @@ full_name = first_name +' ' + last_name
 
 #print (len(full_name))
 
-nested = [[2,[37],4, 'hello']]
+nested = [[5,[37],4, 'hello']]
 my_list = nested[:]
+new_list = cpy.deepcopy(nested)
 nested[0][0] =12
+
+
+
 
 marks = 9
 
