@@ -28,9 +28,6 @@ my_list = nested[:]
 new_list = cpy.deepcopy(nested)
 nested[0][0] =12
 
-
-
-
 marks = 9
 
 if marks > 10:
@@ -43,6 +40,25 @@ test_var = 5
     
 for i in range(5):
     print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

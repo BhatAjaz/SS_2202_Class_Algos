@@ -1,3 +1,55 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Aug  7 13:25:24 2021
+
+@author: ajaz7
+"""
+
+n = 200
+power = 17
+answer = 1
+for i in range(power):
+    answer = answer * n   
+print ("Result is ", answer)
+
+##Creating a function for rasing a number to a power 
+def power(n, power):
+    answer = 1
+    for i in range(power):
+        answer = answer * n  
+    return(answer)
+
+print ("2 power 8 is ", power(2,8))
+
+
+##Creating a function to find all factors of a number n 
+def factors(n):
+    factor_list = []
+    for i in range(1, n+1):
+        if n%i == 0:
+            print(i," is a factor of ", n)
+            factor_list.append(i)    
+    return(factor_list)
+large_num = 173
+print ("All factors of ", large_num, "are ", factors(large_num) )
+
+
+
+
+## Recursive function: A function that calls itself
+def factorial(n):
+    if n<=0:
+        return(1)
+    else:
+        val = n * factorial(n-1)
+        return(val)
+print("factorial of 5 is ", factorial(5))
+
+
+
+##################
+## Object Oriented programming
+##Defining a class
 
 class CreditCard:
   """A consumer credit card."""
@@ -54,6 +106,8 @@ class CreditCard:
     self._balance -= amount
 
 
+##Creating new credit cards (instances) and appending them to a wallet list
+
 if __name__ == '__main__':
   wallet = []
   wallet.append(CreditCard('John Bowman', 'California Savings',
@@ -63,17 +117,20 @@ if __name__ == '__main__':
   wallet.append(CreditCard('John Bowman', 'California Finance',
                            '5391 0375 9387 5309', 5000) )
 
+### Charging a credit card
   for val in range(1, 17):
     wallet[0].charge(val)
     wallet[1].charge(2*val)
     wallet[2].charge(3*val)
 
+#Some printing
   for c in range(3):
     print('Customer =', wallet[c].get_customer())
     print('Bank =', wallet[c].get_bank())
     print('Account =', wallet[c].get_account())
     print('Limit =', wallet[c].get_limit())
     print('Balance =', wallet[c].get_balance())
+    
     while wallet[c].get_balance() > 100:
       wallet[c].make_payment(100)
       print('New balance =', wallet[c].get_balance())
