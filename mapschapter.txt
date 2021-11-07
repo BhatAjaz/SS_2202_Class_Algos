@@ -1,0 +1,39 @@
+Purchase the hardback through Amazonor through Cambridge University Press, or check out the free preprint version below. You can also purchase the Chinese version of the book.
+book
+The current version of the book is the updated first edition (online preprint dated December 2019, printed published version from Cambridge marked "3rd printing 2019" or later). The updated first edition (also referred to as "version 2") includes several corrections and minor additions to the original first edition (first published in May 2017).
+
+This book is the result of course notes developed over many years for the course M2794.0027 Introduction to Robotics at Seoul National University and ME 449 Robotic Manipulation at Northwestern University. The evolving course notes have been posted on the internet for years to support these classes.
+book
+The for-purchase version of the book from Cambridge University Press has improved layout and typesetting, updated figures, different pagination (and fewer pages), and more careful copyediting, and it is considered the "official" version of the book. But the online preprint version of the book has the same chapters, sections, and exercises, and it is quite close in content to the Cambridge-published version.
+
+We are posting four versions of the book. All versions have exactly the same contents and pagination. They differ only in the sizes of the margins and the size of the print, as manipulated in Adobe Acrobat after latex'ing. Two of the versions have working hyperlinks for navigating the book on your computer or tablet.
+
+With working hyperlinks. (To navigate the book using the hyperlinks, click on the hyperlink. To go back where you came from, choose the button or keystroke appropriate to your pdf reader. For example, on the Mac with Acrobat or Acrobat Reader, use cmd-left arrow. With Preview on the Mac, use cmd-[. Some readers on other operating systems use alt-left arrow. You can google to see which solution works for your pdf reader.)
+book
+Default 8.5x11 or A4 version. Printable version with 10 pt font and large margins.
+Tablet version. Margins have been eliminated so that no space is wasted when viewing the document on a computer or tablet.
+Printable versions without working hyperlinks.book
+
+Large font 8.5x11 or A4 version. Printable version with 12 pt font equivalent and smaller margins than the 10 pt default version.
+2up version. Printable version with 2 book pages per page, for saving paper if you have good eyes. Approximately 8.5 pt font equivalent.
+These files have been compressed to about 7 MB. Let us know if you have any problems reading them. Please note that some versions of the default Mac OS X pdf reader, Preview, are known to have bugs displaying certain images in pdf files. If a figure is not appearing properly, please try a better pdf viewer, like Acrobat Reader.
+ book book book book book book book book book book book book  book book book book book book book book book book book book book book book book book book book book book book book book
+Table of Contents:book
+
+Preview
+Configuration Space book
+Rigid-Body Motions
+Forward Kinematics book
+Velocity Kinematics and Statics book
+Inverse Kinematics book
+Kinematics of Closed Chains book
+Dynamics of Open Chains book
+Trajectory Generation book
+Motion Planning book
+Robot Control book
+Grasping and Manipulation book
+Wheeled Mobile Robots book
+Appendix A. Summary of Useful Formulas book
+Appendix B. Other Representations of Rotations book
+Appendix C. Denavit-Hartenberg Parameters book
+Appendix D. Optimization and Lagrange Multipliers book

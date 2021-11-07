@@ -3,8 +3,8 @@ from collections import defaultdict
 import heapq
 
 
-def PrimsMST(graph, starting_vertex):
-    mst = defaultdict(set) # tree we require, set because we don't want cycles
+def Prims_MST(graph, starting_vertex):
+    mst = defaultdict(set) # tree we require
     visited = set([starting_vertex])  # list of vertices visited, so far only starting vertex
     total_cost = 0
     # find all edges from starting vertex 
@@ -34,7 +34,7 @@ example_graph = {
     'G': {'F': 1},
 }
 
-print(PrimsMST(example_graph, 'A'))
+dict(Prims_MST(example_graph, 'A'))
 
 # {'A': set(['B']),
 #  'B': set(['C', 'D']),
@@ -52,7 +52,7 @@ print(PrimsMST(example_graph, 'A'))
 #Kruskals algorithm
 from collections import defaultdict
 import heapq
-## INCORRECT YET; It finds all partitions but doesn't connect them. Need to connect
+
 def Kruskals_MST(graph):
     mst = defaultdict(set) # tree we require
     visited = set()  # list of vertices visited, so far only starting vertex
@@ -66,8 +66,7 @@ def Kruskals_MST(graph):
     
     heapq.heapify(edges) #and order them into a heap, with smallest at the top
     
-#    while visited  !=  set(graph.keys()): #edges: # 
-    while edges:    
+    while visited  !=  set(graph.keys()): #edges: # 
         cost, frm, to = heapq.heappop(edges)
         print( cost, frm, to)
         if (frm and to) not in visited:
@@ -92,58 +91,4 @@ example_graph = {
     'G': {'F': 1},
 }
 
-example_graph = {
-    'A': {'B': 1, 'C': 7, 'D':10},
-    'B': {'A': 1, 'C': 5, 'E': 8},
-    'C': {'A': 7, 'B': 5, 'D': 11, 'E':9},
-    'D': {'A': 10,'C': 11,'E': 3},
-    'E': {'B': 8, 'C': 9, 'D': 3},
-    'F': {'G': 4, 'H': 2},
-    'G': {'F': 4, 'H': 6},
-    'H': {'F': 2, 'G': 6}
-}
-
-print(Kruskals_MST(example_graph))
-
-
-
-
-#Kruskals algorithm
-from collections import defaultdict
-import heapq
-
-def notACycleFormingEdge(frm, to, mst):
-    
-    mst[frm].add(to)
-    vert= frm
-    while not all edges explored in mst:
-      vert_to = mst[vert]
-      if frm in vert_to:
-          return False
-      else:
-          for verts in vert_to:
-              
-    return True
-
-def Kruskals_MST(graph):
-    mst = defaultdict(set) # tree we require
-    total_cost = 0
-    # find all edges from starting vertex 
-    edges = []
-    for starting_vertex, val in graph.items():
-        for to, cost in graph[starting_vertex].items():
-            edges.append ((cost, starting_vertex, to))
-    #print(edges)
-    
-    heapq.heapify(edges) #and order them into a heap, with smallest at the top
-    
-#    while visited  !=  set(graph.keys()): #edges: # 
-    while edges:    
-        cost, frm, to = heapq.heappop(edges)
-        print( cost, frm, to)
-        if notACycleFormingEdge(frm, to, mst):
-            mst[frm].add(to)
-            total_cost += cost
-
-    print('total cost of MST is ', total_cost)
-    return mst
+dict(Kruskals_MST(example_graph))

@@ -277,9 +277,47 @@ Created on Wed May  5 22:16:05 2021
 
 @author: ajaz7
 """
+class Stack:
+    def __init__(self):
+        self.s=[]
+
+    def push(self,value):
+        self.s.append(value)
+
+    def pop(self):
+        if self.is_empty():
+            print("Stack empty, nothing to pop")
+            return
+        else:
+            return self.s.pop()
+
+    def is_empty(self):
+        return len(self.s)==0
+
+    def size(self):
+        return len(self.s)
+
+    def peek(self):
+        if self.is_empty():
+            print("Stack empty, nothing to pop")
+            return
+        else:
+            return self.s[-1]
+
+ms = Stack()
+ms.push(3)
+ms.push(39)
+ms.push(34)
+ms.push(37)
+print(ms.peek())
+print(ms.pop())
+print(ms.pop())
+print(ms.pop())
+print(ms.pop())
+
 class Queue:
   #FIFO queue implementation using a Python list as underlying storage
-    DEFAULT_CAPACITY = 8          # moderate capacity for all new queues
+    DEFAULT_CAPACITY = 80          # moderate capacity for all new queues
     def __init__(self):
         """Create an empty queue."""
         self.data = [None] * Queue.DEFAULT_CAPACITY
@@ -480,6 +518,30 @@ print(qq.data)
 qq.enqueue_front(5)
 print(qq.data)
 
+#Show how to use a stack S and a queue Q to generate all possible subsets
+#of an n-element set T nonrecursively.
+n=[1,2,3,1]
+st=Stack()
+q=Queue()
+
+q.enqueue(set())
+
+for i in range(len(n)):
+    st.push(n[i])
 
 
+while st.is_empty()==False:
+    cur_el=st.pop()
+    print('cur',cur_el)
+    for i in range(q.Size()):
+        a=q.dequeue()
+        print('dequeued now',a)
+        q.enqueue(a)
+        b=a|{cur_el}
+        q.enqueue(b)
+        print('enqueued joined',b)
+
+while q.is_empty()==False:
+    x=q.dequeue()
+    print(x)
 
